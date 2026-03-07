@@ -25,12 +25,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthResponse"
-        "500":
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 
   /api/v1/books:
     get:
@@ -45,12 +39,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/BookListResponse"
-        "500":
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 
     post:
       summary: Create a book
@@ -76,12 +64,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "500":
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 
   /api/v1/books/{id}:
     parameters:
@@ -101,12 +83,6 @@ paths:
                 $ref: "#/components/schemas/BookResponse"
         "404":
           description: Book not found
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-        "500":
-          description: Internal server error
           content:
             application/json:
               schema:
@@ -142,12 +118,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "500":
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 
     delete:
       summary: Delete a book
@@ -163,12 +133,6 @@ paths:
                 $ref: "#/components/schemas/DeleteResponse"
         "404":
           description: Book not found
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-        "500":
-          description: Internal server error
           content:
             application/json:
               schema:
